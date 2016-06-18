@@ -5,105 +5,103 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head runat="server">
-        <title>无标题页</title>
-        <link href="userstyle.css" rel="Stylesheet" type="text/css" />
-        <asp:ContentPlaceHolder id="head" runat="server">
-        </asp:ContentPlaceHolder>
-        <style type="text/css">
-            .style1 { width: 100%; }
-        </style>
-    </head>
-    <body>
-        <form id="form1" runat="server">
-            <asp:ScriptManager ID="ScriptManager1" runat="server" />
+<head runat="server">
+    <title>无标题页</title>
+    <link href="userstyle.css" rel="Stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1 {
+            width: 100%;
+        }
 
-            <div id="box">
-                <div id="top"><table width="303" height="181" border="0" cellpadding="0" cellspacing="0">
-                                  <tr>
-                                      <td width="48" height="121">&nbsp;</td>
-                                      <td width="255">
-                                          <table class="style1">
-                                              <tr>
-                                                  <td align="right">
-                                                      用户名：</td>
-                                                  <td>
-                                                      <asp:TextBox ID="txtUserName" runat="server" Width="98px">mr</asp:TextBox> <cc1:TextBoxWatermarkExtender
-                                                                                                                                     ID="TextBoxWatermarkExtender1" runat="server" 
-                                                                                                                                     TargetControlID="txtUserName" WatermarkText="请输入用户名" WatermarkCssClass="watermark">
-                                                                                                                                 </cc1:TextBoxWatermarkExtender>
-                                                      <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-                                                                                  ControlToValidate="txtUserName" Display="Dynamic" 
-                                                                                  ErrorMessage="不能为空">*</asp:RequiredFieldValidator>
-                                                      <cc1:ValidatorCalloutExtender
-                                                          ID="RequiredFieldValidator2_ValidatorCalloutExtender" runat="server" 
-                                                          HighlightCssClass="Validator" 
-                                                          TargetControlID="RequiredFieldValidator2">
-                                                      </cc1:ValidatorCalloutExtender>
-                                                  </td>
-                                                  <td>
-                                                      <asp:HyperLink ID="HyperLink3" runat="server" ImageUrl="~/images/zhuce_06.gif" 
-                                                                     NavigateUrl="~/UserRegister.aspx">HyperLink</asp:HyperLink>
-                                                  </td>
-                                              </tr>
-                                              <tr>
-                                                  <td align="right">
-                                                      密 码：</td>
-                                                  <td>
-                                                      <asp:TextBox ID="txtPwd" runat="server" TextMode="Password" Width="98px">mrsoft</asp:TextBox>
-                                                  </td>
-                                                  <td>
-                                                      <asp:ImageButton ID="imgBtnLogin" runat="server" 
-                                                                       ImageUrl="~/images/zhuce_03.gif" onclick="imgBtnLogin_Click" />
-                                                  </td>
-                                              </tr>
-                                              <tr>
-                                                  <td align="left" colspan="3">
-                                                      <label><asp:RadioButton ID="rdoBtnIndex" runat="server" Checked="True" GroupName="direction"
-                                                                              Text="浏览相片" /><asp:RadioButton ID="rdoBtnManage" runat="server" GroupName="direction"
-                                                                                                             Text="管理图片" />
-                                                      </label>
-                                                  </td>
-                                              </tr>
-                                          </table>
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td height="33">&nbsp;</td>
-                                      <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                      <td height="27" colspan="2">&nbsp;</td>
-                                  </tr>
-                              </table>
+        .auto-style1 {
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+        <div id="box">
+            <div id="navigate">
+                <a href="~/" runat="server" style="font-size: 20px; color: #FFFFFF; text-decoration: none; margin-left: 25px;">Home
+                </a>
+                <a href="UserRegister.aspx" style="font-size: 20px; color: #FFFFFF; text-decoration: none; margin-left: 670px;">Register
+                </a>
+            </div>
+
+            <div id="top">
+                <div style="background-color: #302D37; opacity:0.8; height: 153px; width: 300px; margin-top: 180px; margin-left: auto; margin-right: auto; padding-top:50px;">
+
+                    <table class="logintb" style=" margin-left: 50px; width: 210px;">
+                        <tr>
+                            <td class="auto-style1">
+                                <img src="images/index02.png" alt="UserName:" />
+                            </td>
+                            <td class="auto-style1">
+                                <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
+                                <cc1:TextBoxWatermarkExtender
+                                    ID="TextBoxWatermarkExtender1" runat="server"
+                                    TargetControlID="txtUserName" WatermarkText="Username" WatermarkCssClass="watermark">
+                                </cc1:TextBoxWatermarkExtender>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+                                    ControlToValidate="txtUserName" Display="Dynamic"
+                                    ErrorMessage="Can not be none!">*</asp:RequiredFieldValidator>
+                                <cc1:ValidatorCalloutExtender
+                                    ID="RequiredFieldValidator1_ValidatorCalloutExtender" runat="server"
+                                    HighlightCssClass="Validator"
+                                    TargetControlID="RequiredFieldValidator1">
+                                </cc1:ValidatorCalloutExtender>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style1">
+                                <img src="images/index03.png" alt="Password:" />                                
+                            </td>
+                            <td class="auto-style1">
+                                <asp:TextBox ID="txtPwd" runat="server" TextMode="Password"></asp:TextBox>
+                                <cc1:TextBoxWatermarkExtender
+                                    ID="TextBoxWatermarkExtender2" runat="server"
+                                    TargetControlID="txtPwd" WatermarkText="Password" WatermarkCssClass="watermark">
+                                </cc1:TextBoxWatermarkExtender>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
+                                    ControlToValidate="txtPwd" Display="Dynamic"
+                                    ErrorMessage="Can not be none!">*</asp:RequiredFieldValidator>
+                                <cc1:ValidatorCalloutExtender
+                                    ID="ValidatorCalloutExtender1" runat="server"
+                                    HighlightCssClass="Validator"
+                                    TargetControlID="RequiredFieldValidator2">
+                                </cc1:ValidatorCalloutExtender>
+
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="2">
+                                <asp:Button ID="imgBtnLogin" runat="server"
+                                    OnClick="imgBtnLogin_Click" Text="Login" style="background-color:#1A2E20;"/>
+                            </td>
+                        </tr>
+                    </table>
+
                 </div>
-  
-                <div id="mid">
-                    <div id="left">
-                        <table width="165" height="336" border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td width="165" height="240" align="left" valign="top">
-                                    <a href="UserLogin.aspx"><img src="images/zhiye_06.gif" width="165" height="50" alt="相册首页" /></a>
-                                    <%--<a href='Photo_slide.aspx?CategoryID=<%=categoryID%>&CategoryName=<%=categoryName%>'>--%><img src="images/ziye_06.gif" width="165" height="50" alt="播放幻灯" /><%--</a>--%>
-                                    <a href="UserRegister.aspx"><img src="images/zhiye_11.gif" width="165" height="50" alt="用户注册" /></a>
-                                    <a href="UserLogin.aspx"><img src="images/ziye_10.gif" width="165" height="50" alt="用户登录" /></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td height="96"><img src="images/zhiye_20.gif" width="165" height="86" /></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div id="right">   <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-                    
-                                       </asp:ContentPlaceHolder></div>
-                </div>
-                <div id="foot"></div>
-            </div>  
-    
- 
-    
- 
-        </form>
-    </body>
+
+
+            </div>
+
+            <div id="mid">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+
+        </div>
+
+
+    </form>
+</body>
 </html>

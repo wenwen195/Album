@@ -17,7 +17,7 @@
 }
 
 #top {
-    background-image: url(images/001_01.gif);
+    /*background-image: url(images/001_01.gif);*/
     background-repeat: no-repeat;
     height: 135px;
     width: 900px;
@@ -54,7 +54,7 @@
     background-repeat: no-repeat;
     float: left;
     height: 445px;
-    width: 633px;
+    width: 900px;
 }
 
 #m_left_img {
@@ -106,7 +106,7 @@
 }
 
 #right_01_gl {
-    background-image: url(images/003_03.gif);
+    /*background-image: url(images/003_03.gif);*/
     background-repeat: no-repeat;
     float: left;
     height: 42px;
@@ -120,7 +120,7 @@
 }
 
 #right_01_sc {
-    background-image: url(images/004_03.gif);
+    /*background-image: url(images/004_03.gif);*/
     background-repeat: no-repeat;
     float: left;
     height: 42px;

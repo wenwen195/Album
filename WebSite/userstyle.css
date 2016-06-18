@@ -3,11 +3,10 @@
     margin: 0px;
     padding: 0px;
 }
-
+ 
 #box {
     color: #000000;
     font-family: "ËÎÌå";
-    font-size: 12px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -15,13 +14,19 @@
 }
 
 #top {
-    background-image: url(images/index01_01.gif);
+    background-image: url(images/index01.jpg);
     background-repeat: no-repeat;
     float: left;
-    height: 181px;
-    padding-right: 564px;
-    padding-top: 46px;
-    width: 306px;
+    height: 485px;
+    width: 870px;
+}
+
+#navigate{
+    float:left;
+    background-color:#16081C;
+    padding-top:8px;
+    height:30px;
+    width: 870px;
 }
 
 #foot {
@@ -36,6 +41,7 @@
     float: left;
     height: auto;
     width: 870px;
+    font-family:"Îº±®";
 }
 
 #left {
@@ -69,3 +75,4 @@
 }
 
 #left img { margin-top: 10px; }
+

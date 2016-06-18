@@ -8,7 +8,8 @@ public partial class UserMasterPage : MasterPage
     {
     }
 
-    protected void imgBtnLogin_Click(object sender, ImageClickEventArgs e)
+
+    protected void imgBtnLogin_Click(object sender, EventArgs e)
     {
         string name = txtUserName.Text;
         string pwd = txtPwd.Text;
@@ -23,10 +24,10 @@ public partial class UserMasterPage : MasterPage
         {
             Session["User"] = txtUserName.Text;
             //判断选中的单选按钮
-            if (rdoBtnIndex.Checked)
-                Response.Redirect("UserLogin.aspx"); //浏览相片
-            else
-                Response.Redirect("ManageDefault.aspx"); //管理图片
+            //if (rdoBtnIndex.Checked)
+            //    Response.Redirect("UserLogin.aspx"); //浏览相片
+            //else
+            //    Response.Redirect("ManageDefault.aspx"); //管理图片
         }
         else
             ScriptManager.RegisterStartupScript(this, GetType(), "",
